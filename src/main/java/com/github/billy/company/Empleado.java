@@ -24,10 +24,10 @@ public class Empleado {
   private void validarEntradas(String nombreCompleto, double salario, double horasTrabajadas) {
     Objects.requireNonNull(nombreCompleto, "nombreCompleto no puede ser null");
     if (salario <= 0) {
-      throw new RuntimeException("salario debe ser mayor a cero");
+      throw new IllegalStateException("salario debe ser mayor a cero");
     }
     if (horasTrabajadas <= 0) {
-      throw new RuntimeException("horasTrabajadas debe ser mayor a cero");
+      throw new IllegalStateException("horasTrabajadas debe ser mayor a cero");
     }
   }
 
