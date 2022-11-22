@@ -41,7 +41,9 @@ public class Empleado {
     builder.append("Salario: ").append(salario).append("\n");
     builder.append("Horas trabajadas: ").append(horasTrabajadas).append("\n");
     builder.append("Valor hora: ").append(calcularValorHora()).append("\n");
-    builder.append("Auxilio de transporte: ").append(calcularAuxilioTransporte()).append("\n");
+    builder.append("Auxilio de transporte: ")
+           .append(calcularAuxilioTransporte() == CERO ? "No tiene auxilio" :
+               calcularAuxilioTransporte()).append("\n");
     builder.append("Retención: ").append(calcularRetencion()).append("\n");
     builder.append("Total a pagar: ").append(calcularTotalSalario()).append("\n");
 
